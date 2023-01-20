@@ -22,7 +22,7 @@ export default function Blog({ author, date, readtime, id, countclap, slug }) {
 
     const c = localStorage.getItem(id);
     if (c) setClap(true);
-  }, []);
+  }, [id]);
 
   const handleClap = () => {
    

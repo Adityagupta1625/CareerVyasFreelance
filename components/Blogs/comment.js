@@ -29,7 +29,7 @@ export default function Comment({ slug }) {
         console.log("No such document!");
       }
     });
-  }, []);
+  }, [slug]);
 
   const handleModal = () => {
     setShowModal(true);
