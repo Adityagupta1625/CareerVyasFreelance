@@ -1,12 +1,6 @@
-import clap from "./images/clap.svg";
-import clap1 from "./images/clap1.svg";
-import clock from "./images/clock.svg";
-import account from "./images/account.svg";
-import calendar from "./images/cal.svg";
-
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import firebaseConfig from "../Firebase/config";
+import firebaseConfig from "../../utils/firebaseConfig";
 import firebase from "firebase/app";
 import "firebase/firestore";
 
@@ -52,7 +46,7 @@ export default function Blog({ author, date, readtime, id, countclap, slug }) {
     <div className="w-full  flex flex-col text- md:text-md">
       <div className="flex flex-row items-center m-1">
         <Image
-          src={account}
+          src="/static/images/Blog/account.svg"
           width={20}
           height={20}
           layout="intrinsic"
@@ -66,7 +60,7 @@ export default function Blog({ author, date, readtime, id, countclap, slug }) {
         <div className="flex flex-col sm:flex-row m-1 items-center">
           <div className="font-semibold mr-3 flex flex-row items-center">
           <Image
-              src={calendar}
+              src="/static/images/Blog/cal.svg"
               width={20}
               height={20}
               layout="intrinsic"
@@ -79,7 +73,7 @@ export default function Blog({ author, date, readtime, id, countclap, slug }) {
 
           <div className="flex flex-row items-center">
             <Image
-              src={clock}
+              src="/static/images/Blog/clock.svg"
               width={20}
               height={20}
               layout="intrinsic"
@@ -91,7 +85,7 @@ export default function Blog({ author, date, readtime, id, countclap, slug }) {
 
         <div className="flex flex-row items-center mr-4 cursor-pointer">
           <Image
-            src={Clap ? clap : clap1}
+            src={Clap ? "/static/images/Blog/clap.svg" : "/static/images/Blog/clap1.svg"}
             width={30}
             height={20}
             layout="intrinsic"

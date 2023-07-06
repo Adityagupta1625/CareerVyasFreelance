@@ -1,9 +1,7 @@
 import Card from "./Card";
 import Lines1 from "../Elements/Lines1";
 import EllipseSide from "../Elements/EllipseSide";
-import side from "./images/side.svg";
 import Image from "next/image";
-import { useEffect } from "react";
 import { useMediaQuery } from "../../utils/media";
 import { motion } from "framer-motion";
 
@@ -52,7 +50,7 @@ export default function Carrer() {
           className="w-full lg:w-1/2 flex flex-row justify-center items-center"
         >
           <Image
-            src={side}
+            src="/static/images/carrer/side.svg"
             alt="Carrer Vyas"
             width={500}
             height={400}

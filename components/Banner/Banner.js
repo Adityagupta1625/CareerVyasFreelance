@@ -1,9 +1,7 @@
-import mobile from "./images/mobile.svg";
 import Image from "next/image";
-import Bolt from "./Elements/bolt";
-import Stars from "./Elements/stars";
-import play from "./images/play.svg";
-import apple from "./images/apple.svg";
+import Bolt from "../../public/static/Elements/Banner/bolt";
+import Stars from "../../public/static/Elements/Banner/stars";
+
 export default function Banner() {
   return (
     <div className="flex flex-row bg-[#EEECEC] w-full h-full relative
@@ -22,7 +20,7 @@ export default function Banner() {
         <div className="flex flex-row items-center justify-center">
           <div className="relative cursor-pointer">
             <Image
-              src={play}
+              src="/static/images/Banner/play.svg"
               alt="app carrer vyas"
               width={500}
               height={300}
@@ -31,7 +29,7 @@ export default function Banner() {
           </div>
           <div className="relative cursor-pointer">
             <Image
-              src={apple}
+              src="/static/images/Banner/apple.svg"
               alt="app carrer vyas"
               width={500}
               height={300}
@@ -46,7 +44,7 @@ export default function Banner() {
         <div className="m-10 h-[220px] md:h-[450px] lg:h-[640px] relative">
         <Stars className={"absolute top-10 right-0 lg:right-10 hidden md:block"}></Stars>
           <Image
-            src={mobile}
+            src="/static/images/Banner/mobile.svg"
             alt="student carrer vyas"
             width={500}
             height={400}

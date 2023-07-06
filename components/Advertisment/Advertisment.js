@@ -1,9 +1,6 @@
 import Image from "next/image";
-import f1 from "./images/f1.svg";
-import f2 from "./images/f2.svg";
-import f3 from "./images/f3.svg";
-import f4 from "./images/f4.svg";
 import Link from "next/link";
+
 export default function Advertisment() {
   return (
     <div className="flex items-center justify-center w-full my-7">
@@ -20,7 +17,7 @@ export default function Advertisment() {
               
                 <Image
                   className="rounded-t-lg"
-                  src={f1}
+                  src="/static/images/Advertisment/f1.svg"
                   alt="career vyas"
                   height={150}
                   width={150}
@@ -43,7 +40,7 @@ export default function Advertisment() {
             <div className="relative  w-[300px] sm:w-[400px] h-[200px]">
               <Image
                 className="rounded-t-lg"
-                src={f3}
+                src="/static/images/Advertisment/f3.svg"
                 alt="career vyas"
                 height={150}
                 width={150}
@@ -74,7 +71,7 @@ export default function Advertisment() {
             <div className="relative  w-[300px] sm:w-[400px] h-[200px]">
               <Image
                 className="rounded-t-lg"
-                src={f2}
+                src="/static/images/Advertisment/f2.svg"
                 alt="career vyas"
                 height={150}
                 width={150}
@@ -99,7 +96,7 @@ export default function Advertisment() {
             <div className="relative w-[300px] sm:w-[400px] h-[200px]">
               <Image
                 className="rounded-t-lg"
-                src={f4}
+                src="/static/images/Advertisment/f4.svg"
                 alt="career vyas"
                 height={150}
                 width={150}

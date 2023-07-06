@@ -2,16 +2,16 @@ import Card from "./Card";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import groq from "groq";
-import client from "../client";
+import client from "../../utils/sanityClient";
 import React from "react";
 
 
 async function getPosts() {
   
   const posts = await client.fetch(groq`
-    *[_type == "latestNotification"] | order(dateTime(_createdAt) desc)
+    *[_type == "latestNotification"]
   `);
-  console.log(posts)
+
   return posts;
 }
 

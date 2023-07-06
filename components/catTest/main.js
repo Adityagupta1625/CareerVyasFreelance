@@ -1,8 +1,6 @@
-import c1 from "./images/c1.svg";
-import c2 from "./images/c2.svg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import firebaseConfig from "../Firebase/config";
+import firebaseConfig from "../../utils/firebaseConfig";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import Router from "next/router";
@@ -50,8 +48,7 @@ export default function CAT() {
     setHometown("");
     setClass("");
     setShowModal(false);
-    
-    console.log("Next Test", nextTest);
+  
 
     if(nextTest === 1){
        Router.push("/StreamTest");
@@ -112,7 +109,7 @@ export default function CAT() {
           </button>
         </div>
         <div className="mr-1 lg:mr-10 w-1/3 h-[230px] relative">
-          <Image src={c1} alt="carrer vyas" layout="fill" objectFit="contain" />
+          <Image src="/static/images/catTest/c1.svg" alt="carrer vyas" layout="fill" objectFit="contain" />
         </div>
       </div>
 
@@ -140,7 +137,7 @@ export default function CAT() {
             Start Your Test
           </button>
           <div className="mr-1 lg:mr-10 w-1/3 h-[130px] relative">
-            <Image src={c1} alt="carrer vyas" layout="fill" objectFit="cover" />
+            <Image src="/static/images/catTest/c1.svg" alt="carrer vyas" layout="fill" objectFit="cover" />
           </div>
         </div>
       </div>
@@ -165,7 +162,7 @@ export default function CAT() {
           </button>
         </div>
         <div className="mr-1 lg:mr-10 w-1/3 h-[230px] relative">
-          <Image src={c2} alt="carrer vyas" layout="fill" objectFit="cover" />
+          <Image src="/static/images/catTest/c2.svg" alt="carrer vyas" layout="fill" objectFit="cover" />
         </div>
       </div>
       {/* Mobile View */}
@@ -191,7 +188,7 @@ export default function CAT() {
             Start Your Test
           </button>
           <div className="mr-1 lg:mr-10 w-1/3 h-[130px] relative">
-            <Image src={c2} alt="carrer vyas" layout="fill" objectFit="cover" />
+            <Image src="/static/images/catTest/c2.svg" alt="carrer vyas" layout="fill" objectFit="cover" />
           </div>
         </div>
       </div>

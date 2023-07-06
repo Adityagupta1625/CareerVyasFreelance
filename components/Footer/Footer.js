@@ -1,12 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../Navbar/images/logo.svg";
-import logo2 from "./images/logo2.svg";
-import instagram from "./images/instagram.svg";
-import facebook from "./images/facebook.svg";
-import twitter from "./images/twitter.svg";
-import linkedin from "./images/linkedin.svg";
-import discord from "./images/discord.svg";
+
 
 export default function Footer() {
   return (
@@ -24,7 +18,7 @@ export default function Footer() {
               h-[150px] w-[125px] relative"
               >
                 <Image
-                  src={logo}
+                  src="/static/images/Navbar/logo.svg"
                   alt="career vyas"
                   height={150}
                   width={125}
@@ -88,7 +82,7 @@ export default function Footer() {
               >
                 <Link href="https://www.instagram.com/careervyas/?utm_medium=copy_link">
                   <Image
-                    src={instagram}
+                    src="/static/images/Footer/instagram.svg"
                     alt="career vyas"
                     objectFit="cover"
                     layout="fill"
@@ -101,7 +95,7 @@ export default function Footer() {
               >
                 <Link href="https://discord.gg/a5dRVB63GM">
                   <Image
-                    src={discord}
+                    src="/static/images/Footer/discord.svg"
                     alt="career vyas"
                     height={30}
                     width={30}
@@ -116,7 +110,7 @@ export default function Footer() {
               >
                 <Link href="https://www.linkedin.com/company/career-vyas">
                   <Image
-                    src={linkedin}
+                    src="/static/images/Footer/linkedin.svg"
                     alt="career vyas"
                     height={30}
                     width={30}
@@ -131,7 +125,7 @@ export default function Footer() {
               >
                 <Link href="https://twitter.com/career_vyas?t=l8Z6rBmtIrWOgeHxFl8UTQ&s=09">
                   <Image
-                    src={twitter}
+                    src="/static/images/Footer/twitter.svg"
                     alt="career vyas"
                     height={30}
                     width={30}
@@ -146,7 +140,7 @@ export default function Footer() {
               >
                 <Link href="https://www.facebook.com/profile.php?id=100086391339652">
                   <Image
-                    src={facebook}
+                    src="/static/images/Footer/facebook.svg"
                     alt="career vyas"
                     height={30}
                     width={30}
