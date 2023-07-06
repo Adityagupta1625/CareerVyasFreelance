@@ -1,6 +1,6 @@
 import Card from "./Card";
 import groq from "groq";
-import client from "../client";
+import client from "../../utils/sanityClient";
 import { useEffect, useState } from "react";
 
 

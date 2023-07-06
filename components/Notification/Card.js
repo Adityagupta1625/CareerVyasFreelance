@@ -1,16 +1,16 @@
 import Image from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
-import client from "../client";
+import client from "../../utils/sanityClient";
 import PortableText from "react-portable-text";
-import sanityClient from "../client";
+import sanityClient from "../../utils/sanityClient";
 
 export default function Card({ post }) {
   const imageProps = useNextSanityImage(client, post.Image);
   return (
     <div
-      className="w-80 h-[720px] rounded  ring-2
+      className="w-80 h-[600px] rounded  ring-2
          ring-blue-300 shadow-lg my-2 mx-auto
-         relative"
+         relative mb-2"
     >
       <div className="w-full h-[200px] rounded-t relative">
         <Image

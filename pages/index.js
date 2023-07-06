@@ -1,5 +1,5 @@
 import Navbar from '../components/Navbar/Navbar'
-import Main from '../components/Main'
+import Main from '../components/Main/Main'
 import Notification from '../components/Notification/Notification'
 import Dairies from '../components/Dairies/Dairies'
 import Stat from'../components/Stats/Stats';
@@ -16,7 +16,6 @@ export default function Home() {
       <Navbar></Navbar>
       <Main></Main>
       <Notification></Notification>
-      <Dairies></Dairies>
       <Stat></Stat>
       <Telegram></Telegram>
       <Youtube></Youtube>

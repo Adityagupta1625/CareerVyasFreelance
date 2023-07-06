@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import firebaseConfig from "../Firebase/config";
+import firebaseConfig from "../../utils/firebaseConfig";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import { ToastContainer, toast } from "react-toastify";
@@ -25,9 +25,7 @@ export default function Comment({ slug }) {
         setCommentData(doc.data().comments);
 
         setRecentComment(doc.data().comments?.slice(-3));
-      } else {
-        console.log("No such document!");
-      }
+      } 
     });
   }, [slug]);
 
@@ -148,11 +146,19 @@ export default function Comment({ slug }) {
           return (
             <div
               key={item.timestamp}
-              className="flex flex-col w-4/5 h-fit my-3
-            border-2 border-slate-400 rounded-md p-2"
+              className="flex flex-col w-7/12 h-fit my-3
+                    border-2 border-slate-400 rounded-md p-2"
             >
-              <span className="font-bold text-md">{item.name}</span>
-              <span className="text-sm">{item.comment}</span>
+              <span className="font-bold text-md flex flex-row items-center mb-2">
+                <img
+                  src="/static/images/Blog/account.svg"
+                  width={25}
+                  height={25}
+                  className="rounded-full mr-2"
+                />
+                <p className="text-md">{item.name}</p>
+              </span>
+              <span className="text-xl">{item.comment}</span>
             </div>
           );
         })}
@@ -200,13 +206,19 @@ export default function Comment({ slug }) {
                         className="flex flex-col w-7/12 h-fit my-3
                     border-2 border-slate-400 rounded-md p-2"
                       >
-                        <span className="font-bold text-md">{item.name}</span>
-                        <span className="text-sm">{item.comment}</span>
+                        <span className="font-bold text-md flex flex-row items-center mb-2">
+                          <img
+                            src="/static/images/Blog/account.svg"
+                            width={25}
+                            height={25}
+                            className="rounded-full mr-2"
+                          />
+                          <p className="text-md">{item.name}</p>
+                        </span>
+                        <span className="text-xl">{item.comment}</span>
                       </div>
-                      
                     );
                   })}
-                   
                 </div>
               </div>
             </div>

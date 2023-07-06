@@ -1,7 +1,7 @@
 import Card from "./Card";
 import Link from "next/link";
 import groq from "groq";
-import client from "../client";
+import client from "../../utils/sanityClient";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -29,7 +29,6 @@ export default function Dairies() {
               postarr.push(post);
             }
           });
-          console.log(postarr);
 
           setpostData(postarr.slice(0, 6));
         }

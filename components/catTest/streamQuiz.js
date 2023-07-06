@@ -1,25 +1,12 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import science from "./images/science.svg";
-import aptitude from "./images/aptitude.svg";
-import english from "./images/english.svg";
-import Side from "./Elements/Side";
-import Bottom from "./Elements/Bottom";
-import EllipseRight from "./Elements/EllipseRight";
-import EllipseLeft from "./Elements/EllipseLeft";
-import left from "./images/left.svg";
-import right from "./images/right.svg";
-import data from "./data";
-import congo from "./images/congo.svg";
-import first from "./images/first.svg";
-import second from "./images/second.svg";
-import last from "./images/last.svg";
-import Link from "next/link";
+import Side from "../../public/static/Elements/catTest/Side";
+import Bottom from "../../public/static/Elements/catTest/Bottom";
+import EllipseRight from "../../public/static/Elements/catTest/EllipseRight";
+import EllipseLeft from "../../public/static/Elements/catTest/EllipseLeft";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import whatsapp from "./images/whatsapp.svg";
-import telegram from "./images/telegram.svg";
-import streamSelector from "./images/streamSelector.svg";
+import data from "./data";
 
 export default function GeneralQuiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -94,7 +81,6 @@ export default function GeneralQuiz() {
 
   const moveleft = () => {
     if (currentQuestion > 0) {
-      console.log("left:", attempted);
 
       setSelected("");
       setSelectedbg(0);
@@ -131,7 +117,7 @@ export default function GeneralQuiz() {
           setSelected("");
           setSelectedbg(0);
 
-          setModalImage(first);
+          setModalImage("/static/images/catTest/first.svg");
           setModalTitle("You are going great!");
           setModalText("Two More Sections to go...");
           setShowModal(true);
@@ -151,7 +137,7 @@ export default function GeneralQuiz() {
           setSelected("");
           setSelectedbg(0);
 
-          setModalImage(second);
+          setModalImage("/static/images/catTest/second.svg");
           setModalTitle("well done!!");
           setModalText("You have completed this section");
           setShowModal(true);
@@ -174,7 +160,7 @@ export default function GeneralQuiz() {
           setSelected("");
           setSelectedbg(0);
 
-          setModalImage(last);
+          setModalImage("/static/images/catTest/last.svg");
           setModalTitle("well done!!");
           setModalText("You have completed this section");
           setShowModal(true);
@@ -213,7 +199,7 @@ export default function GeneralQuiz() {
         }
       }
     } else if (currentQuestion < data[category].length - 1) {
-      console.log("right:", attempted);
+
 
       setSelected("");
       setSelectedbg(0);
@@ -270,7 +256,7 @@ export default function GeneralQuiz() {
             shadow-slate-200 border-2 border-slate-200 rounded-lg p-2 cursor-pointer
             mx-2"
             >
-              <Image src={aptitude} alt="science" width={30} height={30} />
+              <Image src="/static/images/catTest/aptitude.svg" alt="science" width={30} height={30} />
               <p className="text-black text-md">Aptitude</p>
             </div>
             <div
@@ -278,7 +264,7 @@ export default function GeneralQuiz() {
             shadow-slate-200 border-2 border-slate-200 rounded-lg p-2 cursor-pointer
             mx-2"
             >
-              <Image src={science} alt="science" width={30} height={30} />
+              <Image src="/static/images/catTest/science.svg" alt="science" width={30} height={30} />
               <p className="text-black text-md">Science</p>
             </div>
           </div>
@@ -287,14 +273,14 @@ export default function GeneralQuiz() {
               className="w-28 flex flex-row items-center h-8 shadow-md
             shadow-slate-200 border-2 border-slate-200 rounded-lg p-2 cursor-pointer mx-2"
             >
-              <Image src={english} alt="English" width={30} height={30} />
+              <Image src="/static/images/catTest/english.svg" alt="English" width={30} height={30} />
               <p className="text-black text-md">English</p>
             </div>
             <div
               className="w-42 flex flex-row items-center h-8 shadow-md
             shadow-slate-200 border-2 border-slate-200 rounded-lg p-2 cursor-pointer mx-2"
             >
-              <Image src={streamSelector} alt="English" width={20} height={30} />
+              <Image src="/static/images/catTest/streamSelector.svg" alt="Stream Selector" width={20} height={30} />
               <p className="text-black text-md">Stream Selector</p>
             </div>
           </div>
@@ -310,10 +296,10 @@ export default function GeneralQuiz() {
             </h1>
             <div className="flex flex-row ">
               <div className="mx-2 cursor-pointer" onClick={moveleft}>
-                <Image src={left} alt="left" width={40} height={40} />
+                <Image src="/static/images/catTest/left.svg" alt="left" width={40} height={40} />
               </div>
               <div className="mx-2 cursor-pointer" onClick={moveright}>
-                <Image src={right} alt="right" width={40} height={40} />
+                <Image src="/static/images/catTest/right.svg" alt="right" width={40} height={40} />
               </div>
             </div>
           </div>
@@ -485,7 +471,7 @@ export default function GeneralQuiz() {
               >
                 <div className="h-full w-full relative">
                   <Image
-                    src={congo}
+                    src="/static/images/catTest/congo.svg"
                     alt="ModalImage"
                     width={300}
                     height={300}
@@ -508,8 +494,8 @@ export default function GeneralQuiz() {
                   {stream}
                 </p>
                 <div className="flex flex-row justify-end mt-2">
-                  <Image src={whatsapp} alt="whatsapp" width={50} height={50} />
-                  <Image src={telegram} alt="whatsapp" width={50} height={50} />
+                <Image src="/static/images/catTest/whatsapp.svg" alt="whatsapp" width={50} height={50} />
+                <Image src="/static/images/catTest/telegram.svg" alt="whatsapp" width={50} height={50} />
                 </div>
 
 

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
-import client from "../client";
+import client from "../../utils/sanityClient";
 import Link from "next/link";
 
 export default function Card({ post }) {

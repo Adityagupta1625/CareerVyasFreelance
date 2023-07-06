@@ -1,7 +1,6 @@
 import Image from "next/image";
-import Arrow from "./ELements/Arrow";
-import Ellipse from "./ELements/Ellipse";
-import youtube from "./images/youtube.svg";
+import Arrow from "../../public/static/Elements/Youtube/Arrow";
+import Ellipse from "../../public/static/Elements/Youtube/Ellipse";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -37,7 +36,7 @@ export default function Youtube() {
       transition={{ duration:4}}
       className="h-full w-full sm:w-5/12 object-cover relative">
         <Image
-          src={youtube}
+          src="/static/images/youtube/youtube.svg"
           alt="youtube"
           width={700}
           height={300}

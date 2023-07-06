@@ -1,7 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import logo from "./images/logo.svg";
+import Image from "next/image";
 
 export default function Navbar({ background }) {
   const [navback, setNavback] = useState("#E2FBF5");
@@ -31,7 +30,7 @@ export default function Navbar({ background }) {
         <Link href="/">
           <div className="relative h-[150px] w-[100px]">
             <Image
-              src={logo}
+              src="/static/images/Navbar/logo.svg"
               alt="Career Vyas logo"
               width={100}
               height={200}
@@ -111,24 +110,24 @@ export default function Navbar({ background }) {
               x2="30"
               y2="1"
               stroke="black"
-              stroke-opacity="0.74"
-              stroke-width="2"
+              strokeOpacity="0.74"
+              strokeWidth="2"
             />
             <line
               y1="9"
               x2="30"
               y2="9"
               stroke="black"
-              stroke-opacity="0.74"
-              stroke-width="2"
+              strokeOpacity="0.74"
+              strokeWidth="2"
             />
             <line
               y1="17"
               x2="30"
               y2="17"
               stroke="black"
-              stroke-opacity="0.74"
-              stroke-width="2"
+              strokeOpacity="0.74"
+              strokeWidth="2"
             />
           </svg>
         </div>
@@ -188,7 +187,18 @@ export default function Navbar({ background }) {
               Reach Out
             </a>
           </Link>
-          
+          <Link
+            href=""
+            legacyBehavior
+          >
+          <a
+              target="_blank"
+              className="font text-l cursor-pointer tracking-tight  hover:font-bold my-1"
+            >
+              {" "}
+              Newsletter
+            </a>
+          </Link>
           
         </div>
       </div>

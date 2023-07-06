@@ -1,6 +1,6 @@
 import Card from "../Blogs/Card";
 import groq from "groq";
-import client from "../client";
+import client from "../../utils/sanityClient";
 import { useEffect, useState } from "react";
 
 async function getPosts() {
@@ -27,8 +27,7 @@ export default function Blog() {
               postarr.push(post);
             }
           });
-          console.log(postarr);
-
+ 
           setBlog(postarr);
         }
       });

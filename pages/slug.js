@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import sanityClient from "../components/client.js";
-
+import sanityClient from "../utils/sanityClient";
 import imageUrlBuilder from "@sanity/image-url";
 import groq from "groq";
 import Navbar from "../components/Navbar/Navbar";
@@ -10,7 +9,7 @@ import Comments from "../components/Blogs/comment";
 import PortableText from "react-portable-text";
 import Header from "../components/Blogs/header";
 import Head from "next/head.js";
-import firebaseConfig from "../components/Firebase/config";
+import firebaseConfig from "../utils/firebaseConfig";
 import firebase from "firebase/app";
 import "firebase/firestore";
 
@@ -37,7 +36,6 @@ export default function SinglePost() {
     const query = groq`*[_type=="post" && slug.current=="${slug}"][0]`;
 
     sanityClient.fetch(query).then((post) => {
-      console.log(post);
       const authorQuery = groq`*[_type=="author" && _id=="${post?.author._ref}"]`;
 
       sanityClient.fetch(authorQuery).then((author) => {
@@ -66,7 +64,7 @@ export default function SinglePost() {
       </Head>
       <Navbar></Navbar>
       <div className="flex flex-row h-full mx-4 md:mx-24">
-        <div className="flex flex-col m-2 p-4 h-full w-full md:w-4/5 border-2 border-black space-y-5">
+        <div className="flex flex-col m-2 p-4 h-full w-full items-center md:w-4/5 border-2 border-black space-y-5">
           <h2 className="m-2 text-4xl font-bold">{postData.title}</h2>
           <Header
             id={postData._id}
@@ -103,7 +101,7 @@ export default function SinglePost() {
                   style={{
                     fontSize: "2rem",
                     fontWeight: "900",
-                    margin: "12px",
+                    margin: "4px",
                   }}
                   {...props}
                 />
@@ -113,7 +111,7 @@ export default function SinglePost() {
                   style={{
                     fontSize: "1.7rem",
                     fontWeight: "700",
-                    margin: "12px",
+                    margin: "4px",
                   }}
                   {...props}
                 />
@@ -123,7 +121,7 @@ export default function SinglePost() {
                   style={{
                     fontSize: "1.5rem",
                     fontWeight: "600",
-                    margin: "12px",
+                    margin: "4px",
                   }}
                   {...props}
                 />
@@ -133,7 +131,7 @@ export default function SinglePost() {
                   style={{
                     fontSize: "1.3rem",
                     fontWeight: "500",
-                    margin: "12px",
+                    margin: "4px",
                   }}
                   {...props}
                 />
@@ -143,7 +141,7 @@ export default function SinglePost() {
                   style={{
                     fontSize: "1.1rem",
                     fontWeight: "500",
-                    margin: "12px",
+                    margin: "4px",
                   }}
                   {...props}
                 />
@@ -153,7 +151,7 @@ export default function SinglePost() {
                   style={{
                     fontSize: "1rem",
                     fontWeight: "500",
-                    margin: "12px",
+                    margin: "4px",
                   }}
                   {...props}
                 />
@@ -182,7 +180,7 @@ export default function SinglePost() {
                   style={{
                     listStyleType: "disc",
                     marginLeft: "1rem",
-                    margin: "8px",
+                    margin: "4px",
                   }}
                   {...props}
                 />
